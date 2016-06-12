@@ -1,21 +1,11 @@
-import React from 'react'
-import {Decorator as Cerebral} from 'cerebral-view-react'
+import {Component, h} from 'cerebral-view-snabbdom'
 
-@Cerebral({
-  items: 'items'
-})
-class Items extends React.Component {
-  render() {
-    return (
-      <ul>
-        {this.props.items.map((item, index ) => (
-          <li key={index}>
-            {item.title}
-          </li>
-        ))}
-      </ul>
-    )
-  }
-}
+export default Component('Items', {
+  items: 'app.items'
+}, props => (
 
-export default Items
+  h('ul', props.items.map((item, index) => h('li', {
+    key: index
+  }, item)))
+
+))

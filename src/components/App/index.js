@@ -1,32 +1,38 @@
-import React from 'react'
-import {Decorator as Cerebral} from 'cerebral-view-react'
+import {Component, h} from 'cerebral-view-snabbdom'
 import Items from '../Items'
 
-@Cerebral({
-  newItemTitle: 'app.newItemTitle'
-})
-class App extends React.Component {
-  onFormSubmit(event) {
+export default Component('App', {
+  newItemTitle: 'newItemTitle',
+  items: 'items'
+}, props => {
+
+  function onFormSubmit(event) {
     event.preventDefault()
-    this.props.signals.newItemSubmitted()
+    props.signals.newItemSubmitted()
   }
-  onInputChange(value) {
-    this.props.signals.newItemTitleChanged({
-      title: value
+
+  function onInputChange(event) {
+    props.signals.newItemTitleChanged({
+      title: event.target.value
     })
   }
-  render() {
-    return (
-      <div>
-        <form onSubmit={event => this.onFormSubmit(event)}>
-          <input
-            type="text"
-            value={this.props.newItemTitle}
-            onChange={event => this.onInputChange(event)}
-          />
-        </form>
-        <Items />
-      </div>
-    )
-  }
-}
+
+  return h('div', [
+    h('form', {
+      on: {
+        submit: onFormSubmit
+      }
+    }, [
+      h('input', {
+        props: {
+          type: 'text',
+          value: props.newItemTitle
+        },
+        on: {
+          input: onInputChange
+        }
+      })
+    ]),
+    Items()
+  ])
+})
