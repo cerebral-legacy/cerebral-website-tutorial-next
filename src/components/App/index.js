@@ -2,8 +2,8 @@ import {Component, h} from 'cerebral-view-snabbdom'
 import Items from '../Items'
 
 export default Component('App', {
-  newItemTitle: 'newItemTitle',
-  items: 'items'
+  newItemTitle: 'app.newItemTitle',
+  items: 'app.items'
 }, props => {
 
   function onFormSubmit(event) {
