@@ -1,11 +1,9 @@
 function postItem({state, output, services}) {
-  const items = state.get('app.items')
-  const lastItem = items[items.lenght - 1]
+  const item = state.get('items')[0]
 
-  services.http.post('/items', lastItem)
+  services.http.post('/items', item)
     .then(output.success)
     .catch(output.error)
-
 }
 
 postItem.async = true

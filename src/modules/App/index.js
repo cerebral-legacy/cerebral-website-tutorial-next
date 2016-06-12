@@ -6,7 +6,8 @@ export default module => {
 
   module.addState({
     items: [],
-    newItemTitle: ''
+    newItemTitle: '',
+    isSaving: false
   })
 
   module.addSignals({

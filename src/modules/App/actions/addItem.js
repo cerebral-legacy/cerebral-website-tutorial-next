@@ -1,5 +1,5 @@
 function addItem({ state }) {
-  state.push('app.items', {
+  state.unshift('app.items', {
     title: state.get('app.newItemTitle')
   })
 }

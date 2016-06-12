@@ -1,5 +1,5 @@
 function updateItem({input, state}) {
-    throw new Error('Unimplemented cerebral action updateItem');
+  state.merge('items.0', input.result)
 }
 
 export default updateItem;

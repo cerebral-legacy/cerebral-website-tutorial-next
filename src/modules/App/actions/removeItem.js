@@ -1,5 +1,5 @@
-function removeItem({input, state}) {
-    throw new Error('Unimplemented cerebral action removeItem');
+function removeItem({ state }) {
+  state.shift('items')
 }
 
 export default removeItem;
