@@ -2,7 +2,7 @@ import React from 'react'
 import {Decorator as Cerebral} from 'cerebral-view-react'
 
 @Cerebral({
-  items: 'items'
+  items: 'app.items'
 })
 class Items extends React.Component {
   render() {
