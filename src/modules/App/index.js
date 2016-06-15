@@ -1,6 +1,5 @@
 import newItemTitleChanged from './signals/newItemTitleChanged'
-import newItemSubmitted from './signals/newItemSubmitted'
-import itemCompletedToggled from './signals/itemCompletedToggled'
+import newItemTitleSubmitted from './signals/newItemTitleSubmitted'
 
 export default module => {
 
@@ -15,8 +14,7 @@ export default module => {
       chain: newItemTitleChanged,
       immediate: true
     },
-    newItemSubmitted,
-    itemCompletedToggled
+    newItemTitleSubmitted
   })
 
 }

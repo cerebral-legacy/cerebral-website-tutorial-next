@@ -1,5 +1,5 @@
 import copy from 'cerebral-addons/copy'
 
-default export [
+export default [
   copy('input:/title', 'state:/app.newItemTitle')
 ]
