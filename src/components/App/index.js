@@ -3,16 +3,17 @@ import Items from '../Items'
 
 export default Component('App', {
   newItemTitle: 'app.newItemTitle',
-  items: 'app.items'
+  items: 'app.items',
+  isSaving: 'app.isSaving'
 }, props => {
 
   function onFormSubmit(event) {
     event.preventDefault()
-    props.signals.newItemSubmitted()
+    props.signals.app.newItemTitleSubmitted()
   }
 
   function onInputChange(event) {
-    props.signals.newItemTitleChanged({
+    props.signals.app.newItemTitleChanged({
       title: event.target.value
     })
   }
@@ -26,7 +27,8 @@ export default Component('App', {
       h('input', {
         props: {
           type: 'text',
-          value: props.newItemTitle
+          value: props.newItemTitle,
+          disabled: props.isSaving
         },
         on: {
           input: onInputChange

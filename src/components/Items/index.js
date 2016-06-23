@@ -6,6 +6,6 @@ export default Component('Items', {
 
   h('ul', props.items.map((item, index) => h('li', {
     key: index
-  }, item)))
+  }, item.title)))
 
 ))
