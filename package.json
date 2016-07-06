@@ -30,7 +30,7 @@
     "cerebral-model-immutable": "^0.1.0",
     "cerebral-module-devtools": "^0.7.0-rc.2",
     "cerebral-module-http": "^0.2.0",
-    "cerebral-view-react": "^0.12.0-beta.3",
+    "cerebral-view-react": "^0.12.0-beta.7",
     "express": "^4.13.4",
     "html-webpack-plugin": "^2.21.0",
     "react": "^15.1.0",

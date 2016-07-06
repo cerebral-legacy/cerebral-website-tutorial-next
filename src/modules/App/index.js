@@ -1,20 +1,21 @@
-import newItemTitleChanged from './signals/newItemTitleChanged'
-import newItemTitleSubmitted from './signals/newItemTitleSubmitted'
+import changeItemTitle from './chains/changeItemTitle'
+import submitNewTitle from './chains/submitNewTitle'
 
 export default module => {
 
   module.addState({
     items: [],
     newItemTitle: '',
-    isSaving: false
+    isSaving: false,
+    error: null
   })
 
   module.addSignals({
     newItemTitleChanged: {
-      chain: newItemTitleChanged,
+      chain: changeItemTitle,
       immediate: true
     },
-    newItemTitleSubmitted
+    newItemTitleSubmitted: submitNewTitle
   })
 
 }

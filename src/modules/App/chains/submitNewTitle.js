@@ -13,6 +13,8 @@ export default [
   // We set the app is saving mode to
   // disable the input
   set('state:/app.isSaving', true),
+  // We reset the error
+  set('state:/app.error', null),
   // We post the item to the server
   postItem, {
     success: [
@@ -23,7 +25,9 @@ export default [
     error: [
       // We remove the item since it
       // failed
-      removeFailedItem
+      removeFailedItem,
+      // We set an error to display
+      set('state:/app.error', 'Adding item failed on server, removing it')
     ]
   },
   // The app goes back into normal state,

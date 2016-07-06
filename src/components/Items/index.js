@@ -1,14 +1,14 @@
 import React from 'react'
-import {Decorator as Cerebral} from 'cerebral-view-react'
+import {connect} from 'cerebral-view-react'
 
-@Cerebral({
-  items: 'app.items'
-})
-class Items extends React.Component {
-  render() {
+export default connect(
+  {
+    items: 'app.items'
+  },
+  function Items(props) {
     return (
       <ul>
-        {this.props.items.map((item, index ) => (
+        {props.items.map((item, index) => (
           <li key={index}>
             {item.title}
           </li>
@@ -16,6 +16,4 @@ class Items extends React.Component {
       </ul>
     )
   }
-}
-
-export default Items
+)
