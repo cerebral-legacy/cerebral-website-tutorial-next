@@ -1,5 +1,5 @@
-import changeItemTitle from './chains/changeItemTitle'
-import submitNewTitle from './chains/submitNewTitle'
+import changeNewItemTitle from './chains/changeNewItemTitle'
+import submitNewItemTitle from './chains/submitNewItemTitle'
 
 export default module => {
 
@@ -12,10 +12,10 @@ export default module => {
 
   module.addSignals({
     newItemTitleChanged: {
-      chain: changeItemTitle,
+      chain: changeNewItemTitle,
       immediate: true
     },
-    newItemTitleSubmitted: submitNewTitle
+    newItemTitleSubmitted: submitNewItemTitle
   })
 
 }
