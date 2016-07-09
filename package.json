@@ -20,20 +20,17 @@
   "homepage": "https://github.com/cerebral/cerebral-website-tutorial-next#readme",
   "dependencies": {
     "babel-loader": "^6.2.4",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-inferno": "^0.7.6",
     "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "body-parser": "^1.15.1",
     "cerebral": "^0.35.0-beta.2",
     "cerebral-model-immutable": "^0.1.0",
     "cerebral-module-devtools": "^0.7.0-rc.2",
     "cerebral-module-http": "^0.2.0",
-    "cerebral-view-react": "^0.12.0-beta.7",
+    "cerebral-view-inferno": "^1.0.2",
     "express": "^4.13.4",
     "html-webpack-plugin": "^2.21.0",
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1"
   }

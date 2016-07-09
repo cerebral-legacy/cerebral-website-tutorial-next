@@ -1,5 +1,6 @@
-import React from 'react'
-import {connect} from 'cerebral-view-react'
+import Inferno from 'inferno'
+import Component from 'inferno-component'
+import {connect} from 'cerebral-view-inferno'
 import Items from '../Items'
 
 export default connect({
@@ -7,7 +8,7 @@ export default connect({
   isSaving: 'app.isSaving',
   error: 'app.error'
 },
-  class App extends React.Component {
+  class App extends Component {
     componentDidUpdate(prevProps) {
       if (prevProps.isSaving && !this.props.isSaving) {
         this.input.focus()
@@ -29,7 +30,7 @@ export default connect({
             <input
               autoFocus
               type="text"
-              ref={node => this.input = node}
+              onAttached={node => this.input = node}
               disabled={this.props.isSaving}
               value={this.props.newItemTitle}
               onChange={event => this.onInputChange(event)}

@@ -1,6 +1,6 @@
-import React from 'react'
-import {render} from 'react-dom'
-import {Container} from 'cerebral-view-react'
+import Inferno from 'inferno'
+import {render} from 'inferno-dom'
+import {Container} from 'cerebral-view-inferno'
 
 import controller from './controller'
 import App from './components/App'
