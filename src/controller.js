@@ -1,4 +1,4 @@
-import Controller from 'cerebral'
+import {Controller} from 'cerebral'
 import Model from 'cerebral-model-immutable'
 import Devtools from 'cerebral-module-devtools'
 import Http from 'cerebral-module-http'

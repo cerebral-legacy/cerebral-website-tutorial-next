@@ -1,11 +1,13 @@
-import {Component, h} from 'cerebral-view-snabbdom'
+import {connect, h} from 'cerebral-view-snabbdom'
 
-export default Component('Items', {
+export default connect({
   items: 'app.items'
-}, props => (
-
-  h('ul', props.items.map((item, index) => h('li', {
-    key: index
-  }, item.title)))
-
-))
+},
+  function Items(props) {
+    return (
+      h('ul', props.items.map((item, index) => h('li', {
+        key: index
+      }, item.title)))
+    )
+  }
+)
