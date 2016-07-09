@@ -26,7 +26,6 @@
     "babel-preset-stage-0": "^6.5.0",
     "body-parser": "^1.15.1",
     "cerebral": "^0.35.0-beta.2",
-    "cerebral-addons": "^0.5.4",
     "cerebral-model-immutable": "^0.1.0",
     "cerebral-module-devtools": "^0.7.0-rc.2",
     "cerebral-module-http": "^0.2.0",
