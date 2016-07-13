@@ -1,37 +1,18 @@
 const express = require('express')
-const webpackMiddleware = require('webpack-dev-middleware')
 const app = express()
-const webpack = require('webpack')
-const webpackConfig = require('./webpack.config')
-const port = process.env.NODE_ENV === 'production' ? process.env.PORT : 3000
+const port = process.env.NODE_ENV === 'production' ? process.env.PORT : 3001
 const bodyParser = require('body-parser')
 
-if (process.env.NODE_ENV !== 'production') {
-  const compiler = webpack(webpackConfig)
-  const middleware = webpackMiddleware(compiler, {
-    publicPath: webpackConfig.output.publicPath,
-    contentBase: 'src',
-    stats: {
-      colors: true,
-      hash: false,
-      timings: true,
-      chunks: false,
-      chunkModules: false,
-      modules: false
-    }
-  });
-  app.use(middleware)
-}
 app.use(bodyParser.json())
 
 const items = []
 
-app.get('/items', function (req, res) {
+app.get('/api/items', function (req, res) {
   res.send(items)
 })
 
 var failCount = 0
-app.post('/items', function (req, res) {
+app.post('/api/items', function (req, res) {
   failCount++
   var shouldFail = false
   if (failCount === 3) {
