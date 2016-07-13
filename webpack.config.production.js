@@ -30,8 +30,7 @@ module.exports = {
       include: path.resolve('src'),
       loader: 'babel',
       query: {
-        presets: ['es2015', 'stage-0', 'react'],
-        plugins: ['transform-decorators-legacy']
+        presets: ['es2015', 'stage-0', 'react']
       }
     }]
   }
