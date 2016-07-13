@@ -9,7 +9,9 @@ const controller = Controller(Model({}))
 controller.addModules({
   app: App,
 
-  http: Http(),
+  http: Http({
+    baseURL: '/api'
+  }),
   devtools: Devtools()
 })
 
