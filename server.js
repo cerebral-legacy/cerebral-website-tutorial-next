@@ -3,7 +3,7 @@ const webpackMiddleware = require('webpack-dev-middleware')
 const app = express()
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.config')
-const port = process.env.NODE_ENV === 'production' ? process.env.PORT : 8080
+const port = process.env.NODE_ENV === 'production' ? process.env.PORT : 3000
 const bodyParser = require('body-parser')
 
 if (process.env.NODE_ENV !== 'production') {

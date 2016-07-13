@@ -33,7 +33,7 @@ export default connect({
               onAttached={node => this.input = node}
               disabled={this.props.isSaving}
               value={this.props.newItemTitle}
-              onChange={event => this.onInputChange(event)}
+              onInput={event => this.onInputChange(event)}
             />
             {
               this.props.error ?
