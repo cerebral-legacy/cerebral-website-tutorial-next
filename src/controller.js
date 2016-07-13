@@ -1,5 +1,5 @@
 import {Controller} from 'cerebral'
-import Model from 'cerebral-model-immutable'
+import Model from 'cerebral/models/immutable'
 import Devtools from 'cerebral-module-devtools'
 import Http from 'cerebral-module-http'
 import App from './modules/App'
