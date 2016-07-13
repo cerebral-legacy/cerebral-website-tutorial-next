@@ -31,8 +31,7 @@
     "cerebral-view-inferno": "^1.0.3",
     "express": "^4.13.4",
     "html-webpack-plugin": "^2.21.0",
-    "webpack": "^1.13.1",
-    "webpack-dev-middleware": "^1.6.1"
+    "webpack": "^1.13.1"
   },
   "devDependencies": {
     "webpack-dev-server": "^1.14.1"
