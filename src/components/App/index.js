@@ -7,6 +7,9 @@ export default connect({
   newItemTitle: 'app.newItemTitle',
   isSaving: 'app.isSaving',
   error: 'app.error'
+}, {
+  newItemTitleSubmitted: 'app.newItemTitleSubmitted',
+  newItemTitleChanged: 'app.newItemTitleChanged'
 },
   class App extends Component {
     componentDidUpdate(prevProps) {
@@ -16,10 +19,10 @@ export default connect({
     }
     onFormSubmit(event) {
       event.preventDefault()
-      this.props.signals.app.newItemTitleSubmitted()
+      this.props.newItemTitleSubmitted()
     }
     onInputChange(event) {
-      this.props.signals.app.newItemTitleChanged({
+      this.props.newItemTitleChanged({
         title: event.target.value
       })
     }
