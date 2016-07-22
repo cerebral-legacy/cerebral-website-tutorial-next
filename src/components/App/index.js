@@ -6,16 +6,19 @@ export default connect({
   items: 'app.items',
   isSaving: 'app.isSaving',
   error: 'app.error'
+}, {
+  newItemTitleSubmitted: 'app.newItemTitleSubmitted',
+  newItemTitleChanged: 'app.newItemTitleChanged'
 },
   function App(props) {
 
     const onFormSubmit = event => {
       event.preventDefault()
-      props.signals.app.newItemTitleSubmitted()
+      props.newItemTitleSubmitted()
     }
 
     const onInputChange = event => {
-      props.signals.app.newItemTitleChanged({
+      props.newItemTitleChanged({
         title: event.target.value
       })
     }
