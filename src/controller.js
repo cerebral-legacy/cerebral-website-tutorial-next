@@ -10,7 +10,7 @@ controller.addModules({
   app: App,
 
   http: Http({
-    baseURL: '/api'
+    baseUrl: '/api'
   }),
   devtools: Devtools()
 })
