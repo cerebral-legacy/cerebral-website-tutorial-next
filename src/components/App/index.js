@@ -28,6 +28,7 @@ export default connect({
     render () {
       return (
         <div>
+          <p>Type text and hit enter</p>
           <form onSubmit={event => this.onFormSubmit(event)}>
             <input
               autoFocus
