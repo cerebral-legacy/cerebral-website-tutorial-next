@@ -11,37 +11,36 @@ export default connect({
   newItemTitleChanged: 'app.newItemTitleChanged'
 },
   class App extends React.Component {
-    componentDidUpdate(prevProps) {
+    componentDidUpdate (prevProps) {
       if (prevProps.isSaving && !this.props.isSaving) {
         this.input.focus()
       }
     }
-    onFormSubmit(event) {
+    onFormSubmit (event) {
       event.preventDefault()
       this.props.newItemTitleSubmitted()
     }
-    onInputChange(event) {
+    onInputChange (event) {
       this.props.newItemTitleChanged({
         title: event.target.value
       })
     }
-    render() {
+    render () {
       return (
         <div>
           <form onSubmit={event => this.onFormSubmit(event)}>
             <input
               autoFocus
-              type="text"
+              type='text'
               ref={node => this.input = node}
               disabled={this.props.isSaving}
               value={this.props.newItemTitle}
               onChange={event => this.onInputChange(event)}
             />
             {
-              this.props.error ?
-                <span style={{color: 'red', paddingLeft: '10px'}}>{this.props.error}</span>
-              :
-                null
+              this.props.error
+                ? <span style={{color: 'red', paddingLeft: '10px'}}>{this.props.error}</span>
+                : null
             }
           </form>
           <Items />
