@@ -10,8 +10,7 @@ export default connect({
   newItemTitleSubmitted: 'app.newItemTitleSubmitted',
   newItemTitleChanged: 'app.newItemTitleChanged'
 },
-  function App(props) {
-
+  function App (props) {
     const onFormSubmit = event => {
       event.preventDefault()
       props.newItemTitleSubmitted()
@@ -48,15 +47,14 @@ export default connect({
             input: onInputChange
           }
         }),
-        props.error ?
-          h('span', {
+        props.error
+          ? h('span', {
             style: {
               color: 'red',
               paddingLeft: '10px'
             }
           }, props.error)
-        :
-          ''
+          : ''
       ]),
       Items()
     ])

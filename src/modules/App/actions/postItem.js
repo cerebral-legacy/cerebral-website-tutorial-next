@@ -1,4 +1,4 @@
-function postItem({state, output, services}) {
+function postItem ({state, output, services}) {
   const item = state.get('app.items')[0]
 
   services.http.post('/items', item)
@@ -7,6 +7,6 @@ function postItem({state, output, services}) {
 }
 
 postItem.async = true
-postItem.outputs = ['success', 'error'];
+postItem.outputs = ['success', 'error']
 
-export default postItem;
+export default postItem
