@@ -29,6 +29,7 @@ export default connect({
     }
 
     return h('div', [
+      h('p', 'Type text and hit enter'),
       h('form', {
         on: {
           submit: onFormSubmit
