@@ -4,7 +4,7 @@ import {connect} from 'cerebral-view-inferno'
 export default connect({
   items: 'app.items'
 },
-  function Items(props) {
+  function Items (props) {
     return (
       <ul>
         {props.items.map((item, index) => (
