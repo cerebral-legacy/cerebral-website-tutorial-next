@@ -29,6 +29,7 @@ export default connect({
     render () {
       return (
         <div>
+          <p>Type text and hit enter</p>
           <form onSubmit={event => this.onFormSubmit(event)}>
             <input
               autoFocus
@@ -39,7 +40,7 @@ export default connect({
               onInput={event => this.onInputChange(event)}
             />
             {
-              this.props.error 
+              this.props.error
               ? <span style={{color: 'red', paddingLeft: '10px'}}>{this.props.error}</span>
               : null
             }
