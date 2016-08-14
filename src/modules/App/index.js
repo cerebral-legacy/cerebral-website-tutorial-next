@@ -2,7 +2,6 @@ import changeNewItemTitle from './chains/changeNewItemTitle'
 import submitNewItemTitle from './chains/submitNewItemTitle'
 
 export default module => {
-
   module.addState({
     items: [],
     newItemTitle: '',
@@ -17,5 +16,4 @@ export default module => {
     },
     newItemTitleSubmitted: submitNewItemTitle
   })
-
 }
