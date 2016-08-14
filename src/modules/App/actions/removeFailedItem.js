@@ -1,5 +1,5 @@
-function removeFailedItem({state}) {
+function removeFailedItem ({state}) {
   state.shift('app.items')
 }
 
-export default removeFailedItem;
+export default removeFailedItem
