@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerebral/cerebral-website-tutorial-next.git"
+    "url": "git+https://github.com/cerebral-legacy/cerebral-website-tutorial-next.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cerebral/cerebral-website-tutorial-next/issues"
+    "url": "https://github.com/cerebral-legacy/cerebral-website-tutorial-next/issues"
   },
-  "homepage": "https://github.com/cerebral/cerebral-website-tutorial-next#readme",
+  "homepage": "https://github.com/cerebral-legacy/cerebral-website-tutorial-next#readme",
   "dependencies": {
     "body-parser": "^1.15.1",
     "cerebral": "^0.34.2",
